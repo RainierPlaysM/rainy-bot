@@ -1,7 +1,7 @@
 const Discord =require('discord.js');
 const client = new Discord.Client()
 
-const command = require('./command')
+const command = require('./commands.js')
 const config = require('./config.json');
 
 client.on('ready', () => {
