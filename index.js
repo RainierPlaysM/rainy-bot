@@ -1,4 +1,4 @@
-const Discord =require('discord.js');
+const Discord = require('discord.js');
 const client = new Discord.Client()
 
 const command = require('./commands.js')
@@ -15,6 +15,14 @@ client.on('ready', () => {
         client.guilds.cache.forEach((guild) => {
             message.channel.send(`${guild.name} has a total of ${guild.memberCount} members.`)
         }) 
+    })
+
+    command(client, 'purge', message => {
+        if (message.member.hasPermission('ADMINISTRATOR')) {
+            message.channel.messages.fetch().then(results => {
+                message.channel.bulkDelete(results)
+            })
+        }
     })
 })
 
