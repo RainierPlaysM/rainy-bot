@@ -24,6 +24,13 @@ client.on('ready', () => {
             })
         }
     })
+
+    client.user.setPresence({
+        activity: {
+            name: '$help | v1.0.0',
+            type: 'PLAYING'
+        }
+    })
 })
 
 client.login(config.token)
