@@ -27,9 +27,13 @@ client.on('ready', () => {
 
     client.user.setPresence({
         activity: {
-            name: '$help | v1.0.0',
+            name: '$changelog | v1.0.1',
             type: 'PLAYING'
         }
+    })
+
+    command(client, 'changelog', message => {
+        message.channel.send('Changelog (v.1.0.1)! New command - $changelog. The help command is coming soon so heres the current command that the bot has rn -> "$servers, $ping, $purge" Have a great day!')
     })
 })
 
