@@ -27,7 +27,7 @@ client.on('ready', () => {
 
     client.user.setPresence({
         activity: {
-            name: '$changelog | v1.0.1',
+            name: '$changelog | v1.0.1 | OUTDATED VERSION',
             type: 'PLAYING'
         }
     })
